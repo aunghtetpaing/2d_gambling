@@ -1,0 +1,14 @@
+<ion-list id="labels-list">
+  <ion-list-header>Account Setting</ion-list-header>
+
+  <ion-item
+    lines="none" 
+    *ngFor="let menu of settingMenu ;let i = index" 
+    routerDirection="forward" 
+    [routerLink]="[menu.route]" 
+    detail="false" 
+  >
+    <ion-icon color="primary" slot="start" name="{{menu.icon}}"></ion-icon>
+    <ion-label color="primary">{{ menu.name }}</ion-label>
+  </ion-item>
+</ion-list>

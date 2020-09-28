@@ -1,0 +1,167 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeForm()"> 
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title> Create Bet </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="closeForm()"> Save </ion-button>
+      <ion-button (click)="clear()"> Cancel </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <table *ngIf="showLists" class="preview"> 
+    <tr>
+      <td> Number </td>
+      <td> Amount </td>
+      <td></td>
+    </tr>
+
+    <tr *ngFor="let trans of transLists">
+      <td> {{ trans.number}} ({{ trans.type }}) </td>
+      <td> {{ trans.amount }} Ks. </td>
+      <td>
+        <ion-buttons class="btn-remove">
+          <ion-button (click)="remove(trans)">
+            <ion-icon slot="icon-only" color="primary" name="remove-circle-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons> 
+      </td>
+    </tr>
+  </table>
+  <!-- <ion-row>
+    <ion-item>
+      <ion-input placeholder="Name" [(ngModel)]="createBet.name"></ion-input>
+      <ion-button class="btn-content" (click)="openContentBook()">
+        <ion-icon name="person-add-outline"></ion-icon> Contact
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Phone" inputmode="numeric" maxLength="12" [(ngModel)]="createBet.phone"></ion-input>
+    </ion-item>
+  </ion-row> -->
+
+  <section class="input-group">
+    <ion-item>
+      <ion-input placeholder="2D Number" inputmode="numeric" maxLength="2" [(ngModel)]="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Amount" inputmode="numeric" [(ngModel)]="amount"></ion-input>
+    </ion-item>
+  </section>
+
+  <section class="type">
+    <ion-chip>
+      <ion-label color="primary"> Reverse </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Even </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Odd </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Power </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Direct </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Reverse </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Even </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Odd </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Power </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Direct </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Reverse </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Even </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Odd </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Power </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Direct </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Reverse </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Even </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Odd </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Power </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Direct </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Reverse </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Even </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Odd </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Power </ion-label>
+    </ion-chip>
+
+    <ion-chip>
+      <ion-label color="primary"> Direct </ion-label>
+    </ion-chip>
+  </section>
+
+  <section class="btn-wrapper">
+    <ion-button expand="block" (click)="addTrans()"> Add </ion-button>
+  </section>
+</ion-content>

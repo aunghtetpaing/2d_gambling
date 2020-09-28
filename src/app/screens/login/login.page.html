@@ -1,0 +1,34 @@
+<ion-content>
+
+  <section class="header">
+    <img class="logo" src="../../../assets/logo.png" />
+  </section>
+
+  <section class="row title">
+    <h3> Login </h3>
+  </section>
+
+  <ion-item color="primary" lines="none">
+    <ion-input 
+      placeholder="phone number"
+      inputmode="tel"
+      type="numeric"
+      pattern="tel"
+      [(ngModel)]="user.phoneNumber"
+    ></ion-input>
+  </ion-item>  
+  
+  <ion-item color="primary" lines="none">
+    <ion-input 
+      placeholder="password"
+      type="password"
+      inputmode="text"
+      pattern="text"
+      [(ngModel)]="user.password"
+    ></ion-input>
+  </ion-item>     
+
+  <section class="row">
+    <ion-button (click)="login()"> Login </ion-button>
+  </section>
+</ion-content>

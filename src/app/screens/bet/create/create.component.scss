@@ -1,0 +1,84 @@
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ion-item {
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+    --border-radius: 0px;
+    margin-top: 20px;
+    border: 0px;
+}
+
+.type {
+    width: 100%;
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.btn-wrapper {
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.preview {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview > tr {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #830102;
+}
+
+.preview > tr:first-child > td {
+    font-weight: bold;
+    font-size: medium
+}
+
+.preview > tr > td {
+    text-align: left;
+    font-size: small;
+    font-weight: bold;
+}
+
+.btn-remove {
+    --min-height: 10px;
+    margin-inline-end: 0px;
+    --padding-end: 0px;
+    --padding-start: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+}
+
+.btn-remove > ion-button {
+    --padding-top: 5px;
+    --padding-end: 5px;
+    --padding-bottom: 5px;
+    --padding-start: 5px;
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Dashbaord </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <section class="block-row">
+    <ion-button *ngFor='let in of counter(100); let i = index' class="block">
+      <span *ngIf="i < 10"> 0{{ i }} </span>
+      <span *ngIf="i >= 10"> {{ i }}</span>
+    </ion-button>
+  </section>
+</ion-content>
